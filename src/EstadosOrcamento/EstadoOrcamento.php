@@ -1,25 +1,24 @@
 <?php
 
-namespace Alura\DesignPatterns\EstadosOrcamento;
+namespace Alura\DesignPattern\EstadosOrcamento;
 
-use Alura\DesignPatterns\Orcamento;
-use DomainException;
+use Alura\DesignPattern\Orcamento;
 
 abstract class EstadoOrcamento
 {
     /**
-     * @throws DomainException
+     * @throws \DomainException
      */
     abstract public function calculaDescontoExtra(Orcamento $orcamento): float;
 
     public function aprova(Orcamento $orcamento)
     {
-        throw new \DomainException( 'Este orçamento não pode ser aprovado');
+        throw new \DomainException('Este orçamento não pode ser aprovado');
     }
 
     public function reprova(Orcamento $orcamento)
     {
-        throw new \DomainException('Este orçamento não pode ser reprovado');
+        throw new \DomainException('Este orçamento não pode ser reprovad');
     }
 
     public function finaliza(Orcamento $orcamento)

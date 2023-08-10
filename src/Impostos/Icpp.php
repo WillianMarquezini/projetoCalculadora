@@ -1,12 +1,11 @@
 <?php
 
-namespace Alura\DesignPatterns\Impostos;
+namespace Alura\DesignPattern\Impostos;
 
-use Alura\DesignPatterns\Orcamento;
+use Alura\DesignPattern\Orcamento;
 
 class Icpp extends ImpostoCom2Aliquotas
 {
-
     protected function deveAplicarTaxaMaxima(Orcamento $orcamento): bool
     {
         return $orcamento->valor > 500;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Alura\DesignPatterns;
+namespace Alura\DesignPattern;
 
 class Pedido
 {
     public string $nomeCliente;
-    public \DateTimeImmutable  $dataFinalizacao;
+    public \DateTimeInterface $dataFinalizacao;
     public Orcamento $orcamento;
 }

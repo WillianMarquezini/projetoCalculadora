@@ -1,14 +1,14 @@
 <?php
 
-namespace Alura\DesignPatterns\Impostos;
+namespace Alura\DesignPattern\Impostos;
 
-use Alura\DesignPatterns\Orcamento;
+use Alura\DesignPattern\Orcamento;
 
 abstract class ImpostoCom2Aliquotas implements Imposto
 {
     public function calculaImposto(Orcamento $orcamento): float
     {
-        if($this->deveAplicarTaxaMaxima($orcamento)) {
+        if ($this->deveAplicarTaxaMaxima($orcamento)) {
             return $this->calculaTaxaMaxima($orcamento);
         }
 

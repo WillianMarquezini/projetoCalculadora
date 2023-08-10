@@ -1,8 +1,8 @@
 <?php
 
-namespace Alura\DesignPatterns\EstadosOrcamento;
+namespace Alura\DesignPattern\EstadosOrcamento;
 
-use Alura\DesignPatterns\Orcamento;
+use Alura\DesignPattern\Orcamento;
 
 class Finalizado extends EstadoOrcamento
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Alura\DesignPatterns;
+namespace Alura\DesignPattern;
 
-use Alura\DesignPatterns\Impostos\Imposto;
+use Alura\DesignPattern\Impostos\Imposto;
 
 class CalculadoraDeImpostos
 {

@@ -1,35 +1,44 @@
 <?php
 
-namespace Alura\DesignPatterns;
-use Alura\DesignPatterns\Orcamento as OrcamentoAlias;
-use Alura\DesignPatterns\Pedido as PedidoAlias;
+namespace Alura\DesignPattern;
 
-
-class GerarPedido implements Command
+class GerarPedido
 {
     private float $valorOrcamento;
     private int $numeroItens;
     private string $nomeCliente;
 
-    public function __construct(float $valorOrcamento, int $numeroItens, string $nomeCliente)
-    {
+    public function __construct(
+        float $valorOrcamento,
+        int $numeroItens,
+        string $nomeCliente
+    ) {
         $this->valorOrcamento = $valorOrcamento;
         $this->numeroItens = $numeroItens;
         $this->nomeCliente = $nomeCliente;
     }
 
-    public function execute()
+    /**
+     * @return float
+     */
+    public function getValorOrcamento(): float
     {
-        $orcamento = new OrcamentoAlias();
-        $orcamento->quantidadeItens = $this->numeroItens;
-        $orcamento->valor = $this->valorOrcamento;
+        return $this->valorOrcamento;
+    }
 
-        $pedido = new PedidoAlias();
-        $pedido->dataFinalizacao = new \DateTimeImmutable();
-        $pedido->nomeCliente = $this->nomeCliente;
-        $pedido->orcamento = $orcamento;
+    /**
+     * @return int
+     */
+    public function getNumeroItens(): int
+    {
+        return $this->numeroItens;
+    }
 
-        echo "Cria pedido no banco de dados" . PHP_EOL;
-        echo "Envia email para cliente" . PHP_EOL;
+    /**
+     * @return string
+     */
+    public function getNomeCliente(): string
+    {
+        return $this->nomeCliente;
     }
 }

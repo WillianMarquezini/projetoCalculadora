@@ -1,10 +1,10 @@
 <?php
 
-namespace Alura\DesignPatterns\EstadosOrcamento;
+namespace Alura\DesignPattern\EstadosOrcamento;
 
-use Alura\DesignPatterns\Orcamento;
+use Alura\DesignPattern\Orcamento;
 
-class Aprovado extends Orcamento
+class Aprovado extends EstadoOrcamento
 {
     public function calculaDescontoExtra(Orcamento $orcamento): float
     {

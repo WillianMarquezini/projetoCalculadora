@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\DesignPatterns;
+namespace Alura\DesignPattern;
 
 interface Command
 {

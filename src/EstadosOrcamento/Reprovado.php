@@ -1,12 +1,12 @@
 <?php
 
-namespace Alura\DesignPatterns\EstadosOrcamento;
+namespace Alura\DesignPattern\EstadosOrcamento;
 
-use Alura\DesignPatterns\Orcamento;
+use Alura\DesignPattern\Orcamento;
 
-class Reprovado extends Orcamento
+class Reprovado extends EstadoOrcamento
 {
-    public function calculaDescontoExtra(Orcamento $orcamento)
+    public function calculaDescontoExtra(Orcamento $orcamento): float
     {
         throw new \DomainException('Um orçamento reprovado não pode receber desconto');
     }
